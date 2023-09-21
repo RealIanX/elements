@@ -20,7 +20,7 @@ export class AuthPage {
 
     for (const key in this.traits) {
       this.formFields[key] = locator.locator(
-        `input[name="${this.traits[key].name || key}"]`,
+        `input[name="${this.traits[key].name ?? key}"]`,
       )
     }
 
@@ -34,13 +34,13 @@ export class AuthPage {
   }
 
   async expectTraitFields(traits?: Record<string, Traits>) {
-    const t = traits || this.traits
+    const t = traits ?? this.traits
     for (const key in t) {
       if (t[key].type === "hidden") {
         await expect(this.locator.locator(`*[name="${key}"]`)).toBeHidden()
       } else {
         await expect(
-          this.locator.locator(`*[name="${t[key].name || key}"]`),
+          this.locator.locator(`*[name="${t[key].name ?? key}"]`),
         ).toBeVisible()
       }
     }
@@ -60,7 +60,7 @@ export class AuthPage {
         await this.formFields[key].click()
       }
     }
-    await this.locator.locator(buttonLocator || '[type="submit"]').click()
+    await this.locator.locator(buttonLocator ?? '[type="submit"]').click()
   }
 
   async expectFlowMessage(text: string) {
@@ -162,7 +162,7 @@ export class AuthPage {
         ...merge(
           {},
           state === "session_active"
-            ? this.sessionSuccessResponse
+            ? this.sessionSuccessResponse()
             : this.sessionForbiddenResponse(),
           response,
         ),
