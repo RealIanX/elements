@@ -17,7 +17,9 @@ const base = style({
   padding: pxToRem(48),
   background: oryTheme.background.surface,
   color: oryTheme.foreground.def,
-  boxSizing: "border-box",
+  boxSizing: "border-box", // to remove ?
+  // maxWidth: pxToRem(336),
+  // minWidth: pxToRem(336),
   "@media": {
     [`screen and (max-width: ${defaultBreakpoints.sm})`]: {
       width: "100%",
