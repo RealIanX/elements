@@ -17,8 +17,8 @@ const card = style({
   padding: pxToRem(48),
   background: oryTheme.background.surface,
   color: oryTheme.foreground.def,
-  maxWidth: pxToRem(336),
-  minWidth: pxToRem(336),
+  // maxWidth: pxToRem(336),
+  // minWidth: pxToRem(336),
   "@media": {
     [`screen and (max-width: ${defaultBreakpoints.sm})`]: {
       width: "100%",

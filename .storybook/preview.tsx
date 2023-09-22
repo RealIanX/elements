@@ -6,6 +6,7 @@ import "@ory/elements/assets/fa-solid.min.css"
 import "@ory/elements/assets/fontawesome.min.css"
 import "@ory/elements/assets/inter-font.css"
 import "@ory/elements/assets/jetbrains-mono-font.css"
+import "@ory/elements/assets/tailwind.css"
 import "@ory/elements/style.css"
 
 import React from "react"

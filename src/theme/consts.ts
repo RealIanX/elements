@@ -88,7 +88,7 @@ export const defaultLightTheme: Theme = {
   fontFamilyMono: "JetBrainsMono",
   fontStyle: "normal",
   accent: {
-    def: "#3D53F5",
+    def: "#000000",
     muted: "#6475F7",
     emphasis: "#3142C4",
     disabled: "#E0E0E0",
@@ -140,7 +140,7 @@ export const defaultDarkTheme: Theme = {
     def: "#6475f7",
     disabled: "#757575",
     muted: "#3142c4",
-    emphasis: "#3d53f5",
+    emphasis: "#000000",
     subtle: "#0c1131",
   },
   foreground: {
